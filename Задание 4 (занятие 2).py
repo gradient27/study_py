@@ -1,4 +1,4 @@
-my_str = str(input('Введите несколько слов, разделенных пробелами: '))
+my_str = input('Введите несколько слов, разделенных пробелами: ')
 print(f'Вы ввели: {my_str}')
 my_list = my_str.split(' ')
 # print(my_list)
