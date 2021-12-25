@@ -8,12 +8,12 @@ def my_input ():
     tel = input('введите номер телефона: ')
     return name, surname, year, city, email, tel
 
-def my_print (name, surname, year, city, email, tel):
+def my_print (name = '', surname = '', year = '', city = '', email = '', tel = ''):
     print(f'Имя: {name}, Фамилия: {surname}, Год рождения: {year}, Город проживания: {city}, email: {email}, Телефон: {tel}')
 
 def main():
-    name, surname, year, city, email, tel = my_input()
-    my_print(name, surname, year, city, email, tel)
+    a, b, c, d, e, f = my_input()
+    my_print(name = a, surname = b, year = c, city = d, email = e, tel = f)
 
 main()
 
