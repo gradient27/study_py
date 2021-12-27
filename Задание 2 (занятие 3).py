@@ -1,4 +1,5 @@
-# Простой, но работающий вариант
+# ---- Мое решение ----
+
 def my_input ():
     name = input('введите имя: ')
     surname = input('введите фамилию: ')
@@ -16,35 +17,26 @@ def main():
     my_print(name = a, surname = b, year = c, city = d, email = e, tel = f)
 
 main()
+# ---- Конец моего решения ----
 
 
 '''
-# ----Вариант 2 ---
-# Переделанный код из задания 6 к занятию 2
-def input_elem():
-    goods = []
-    features = {'Имя': '', 'Фамилия': '', 'Год рождения': '', 'Город проживания': '', 'email': '', 'Телефон': ''}
-    num = 0
-    while True:
-        if input('Для выхода из приложения нажмите Q, для продолжения нажмите Enter: ').upper() == 'Q':
-            return dict(goods)
-        num += 1
-        for f in features.keys():
-            prop = input(f'Введите значение свойства {f}: ')
-            features[f] = prop
-        goods.append((num, features.copy()))
+# ---- Решение Евгения ---
+def person_inf(name, surname, birthday, city, email, phone):
+    return f'Name - {name}; Surname - {surname}; Birthday - {birthday}; City - {city};'\
+           f'Email - {email}; Phone - {phone}'
 
-def my_print(*arg):
-    my_list = arg
-    #print(type(my_list))
-    for _ in my_list:
-        print(f'{_}')
+def personal_inf(**kwargs):
+    return ' '.join(kwargs.values())
 
-def main():
-    arg = input_elem()
-    my_print(arg)
+name = input('Введите имя: ')
+surname = input('Введите фамилию: ')
+birthday = input('Введите год рождения: ')
+city = input('Введите место жительства: ')
+email = input('Введите email: ')
+phone = input('Введите телефон: ')
 
-main()
+print(personal_inf(name=name, surname=surname, birthday=birthday, city=city, email=email, phone=phone))
 
-# ---- Конец варианта 1 ---
+# ---- Конец решения Евгения ---
 '''

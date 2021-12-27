@@ -1,3 +1,5 @@
+# ---- Мой вариант решения ----
+
 def my_input():
     my_l = ['start_pos']
     # Заполняем список значениями
@@ -31,4 +33,23 @@ def main():
     my_print(my_list)
 
 main()
+# ---- Конец моего решения ----
+'''
+# ---- Решение Евгения 1----
+def my_func(num_1: int, num_2: int, num_3: int):
+    my_list = [num_1, num_2, num_3]
+    try:
+        my_list.remove(min(my_list))
+        return sum(my_list)
+    except TypeError:
+        return 'Введите только числа'
+print(my_func(2, 11, -30))
 
+# ---- Решение Евгения 2 ----
+def my_func(arg1, arg2, arg3):
+    my_list = [arg1, arg2, arg3]
+    return sum(sorted(my_list)[1:])
+    #print(sorted(my_list))
+
+print(my_func(2, 11, -30))
+'''

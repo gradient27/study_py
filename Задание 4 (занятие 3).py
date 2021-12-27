@@ -1,5 +1,5 @@
-# --- Вариант 1 (**) ---
-'''
+# ---Мое решение Вариант 1 (**) ---
+
 def my_input():
     x = -1
     y = 1
@@ -18,7 +18,7 @@ def main():
     my_func(x, y)
 
 main()
-'''
+
 
 # --- Вариант 2 (без **) ---
 def my_input():
@@ -47,3 +47,21 @@ def main():
     my_func(x, y)
 
 main()
+'''
+
+# ---- Решение Евгения ----
+def my_pow_fun(x, y):
+    try:
+        x, y = float(x), int(y)
+        if x <= 0 or y >= 0:
+            return 'Ошибка, x должен быть больше 0, а y меньше 0'
+        else:
+            result = 1
+            for _ in range(abs(y)):
+                result *= 1 / x
+            return f'Результат возведения в степень: {round(result, 6)}'
+    except ValueError:
+        return "Программа работает только с числами"
+
+print(my_pow_fun(2, -3))
+'''

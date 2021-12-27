@@ -1,25 +1,6 @@
-# Решение 1, нет проверки на тип введенных данных и при нуле нет повтора ввода
-'''
-def my_devision(delimoe, delitel):
-    return delimoe / delitel
+# ---- Мое Решение, если 0 предлагается ввести делитель повторно ----
 
 def input_elem():
-    delimoe = int(input('Введите делимое: '))
-    delitel = int(input('Введите делитель: '))
-    return delimoe, delitel
-
-def main():
-    delimoe, delitel = input_elem()
-    if delitel != 0:
-        print(f'Результат деления: {my_devision(delimoe, delitel)}')
-    else:
-        print('Значение вычислить не возможно, делитель равено 0')
-
-main()
-'''
-# Решение 2, если 0 предлагается ввести делитель повторно
-def input_elem():
-    '''Функция запрашивает данные у пользователя'''
     delitel = 0
     delimoe = int(input('Введите делимое: '))
     while delitel == 0:
@@ -27,7 +8,6 @@ def input_elem():
     return delimoe, delitel
 
 def my_devision(delimoe, delitel):
-    ''' Функиция вычисляет результат деления'''
     return delimoe / delitel
 
 def main():
@@ -35,3 +15,20 @@ def main():
     print(f'Результат деления: {my_devision(delimoe, delitel)}')
 
 main()
+
+# ---- Конец моего решения ----
+
+# ---- Решение Евгения ----
+'''
+def div(s_1, s_2):
+    try:
+        s_1, s_2 = int(s_1), int(s_2)
+        div_num = s_1 / s_2
+    except ValueError:
+        return 'Некорректные данные'
+    except ZeroDivisionError:
+        return 'Делить на ноль нельзя'
+    return round(div_num, 4)
+
+print(div(input('Введите первое число: '), input('Введите второе число: ')))
+'''
