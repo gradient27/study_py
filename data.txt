@@ -1,3 +1,2 @@
-
 new string: 1234
 new string: 5678
