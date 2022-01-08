@@ -1,6 +1,5 @@
 with open('data.txt', 'r', encoding='utf-8') as f:
     my_dict = {}
-    new_dict = {}
     for line in f:
         my_list = line.split(":")
         my_name = my_list[0]
@@ -18,6 +17,5 @@ with open('data.txt', 'r', encoding='utf-8') as f:
         for el in new_list:
             el = int(el)
             sum = sum + el
-        new_dict = {my_name : sum}
-        my_dict.update(new_dict)
+        my_dict.update({my_name : sum})
     print(my_dict)
